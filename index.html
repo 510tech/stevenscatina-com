@@ -73,12 +73,16 @@
   .btn.ghost{background:transparent; color:var(--white); border-color:var(--rule)}
   .btn.ghost:hover{background:transparent; border-color:var(--orange); color:var(--orange); text-decoration:none}
 
-  .portrait{position:relative}
+  .portrait{position:relative; display:flex; justify-content:flex-end; align-items:flex-start}
   .portrait img{
-    width:100%;
-    /* the source photo is on true black; fade its edges so it melts into the Ink ground */
-    -webkit-mask-image:radial-gradient(ellipse 72% 62% at 52% 46%, #000 58%, transparent 82%);
-    mask-image:radial-gradient(ellipse 72% 62% at 52% 46%, #000 58%, transparent 82%);
+    /* height:auto is load-bearing — as a flex child the image otherwise stretches
+       vertically to the row height and wrecks the aspect ratio. */
+    width:100%; max-width:430px; height:auto;
+    /* No mask. The source photo's black was re-levelled in ffmpeg to exactly #0E0E0E
+       (verified: corner pixels read 14,14,14) so it matches the page ground and the
+       frame edge simply disappears. A radial mask was tried first and is the wrong
+       tool here — the crop leaves almost no black margin above the hat, so any fade
+       soft enough to hide the edges also clips the top of his head. */
   }
 
   /* ---------- sections ---------- */
@@ -89,11 +93,12 @@
 
   .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
   .card{background:var(--ink3); border:1px solid var(--rule); padding:30px 26px; display:flex; flex-direction:column}
-  .card h3{font-size:23px; font-weight:800; margin-bottom:12px}
+  .card h3{font-size:23px; font-weight:800; margin-bottom:12px; min-height:24px; display:flex; align-items:center}
   .card p{color:var(--muted); font-size:16px; margin:0 0 18px}
   .card .role{font-family:var(--mono); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted2); margin:0 0 14px}
   .card .go{margin-top:auto; font-family:var(--mono); font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase}
-  .card-logo{height:26px; width:auto; margin-bottom:16px}
+  /* sized to match the cap height of the sibling cards' h3 so every "role" line aligns */
+  .card-logo{height:24px; width:auto; align-self:flex-start}
 
   .principles{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
   .principle{border-left:2px solid var(--orange); padding:4px 0 4px 20px}
@@ -166,7 +171,7 @@
       <div class="grid-3">
 
         <article class="card">
-          <img class="card-logo" src="assets/510tech-wordmark.svg" alt="510tech" width="83" height="26">
+          <h3><img class="card-logo" src="assets/510tech-wordmark.svg" alt="510tech" width="76" height="24"></h3>
           <p class="role">Founder &middot; Strategy &amp; Operations</p>
           <p>A digital marketing agency in the East Bay. Google, Yelp and Meta ads, web design, SEO and AI search optimization for local service businesses — the kind of work where response time and follow-through decide who wins.</p>
           <a class="go" href="https://510tech.com" rel="noopener">510tech.com &rarr;</a>
