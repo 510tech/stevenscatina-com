@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steven Scatina — Founder, 510tech</title>
+<meta name="description" content="Steven Scatina — founder of 510tech, a Berkeley digital marketing agency. Reptile breeder at One Ring Reptiles. Portrait and event photographer in the East Bay.">
+<!-- REMOVE noindex at domain cutover — see plans/2026-08-12-stevenscatina-com-dns-and-registrar-move.md -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://stevenscatina.com/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Steven Scatina — Founder, 510tech">
+<meta property="og:description" content="Marketing agency founder in the East Bay. Reptile breeder. Photographer.">
+<meta property="og:image" content="https://stevenscatina.com/assets/steven-scatina.jpg">
+<meta name="theme-color" content="#0E0E0E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Overpass:wght@700;800;900&family=Overpass+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E0E0E; --ink2:#151515; --ink3:#1E1E1E; --ink4:#2A2A2A;
+    --rule:#333333; --muted:#A7A7A7; --muted2:#888888;
+    --white:#FFFFFF; --orange:#FA6831; --orange-bright:#FF7A3D; --sky:#4AADDD;
+    --display:'Overpass',system-ui,sans-serif;
+    --body:'Open Sans',system-ui,sans-serif;
+    --mono:'Overpass Mono',Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ink); color:var(--white);
+    font-family:var(--body); font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:100%; max-width:1120px; margin:0 auto; padding:0 24px}
+  a{color:var(--orange); text-decoration:none}
+  a:hover{color:var(--orange-bright); text-decoration:underline}
+  a:focus-visible{outline:2px solid var(--sky); outline-offset:3px}
+  img{max-width:100%; display:block}
+  p{text-wrap:pretty}
+  h1,h2,h3{font-family:var(--display); text-wrap:balance; margin:0; letter-spacing:-0.02em; line-height:1.05}
+
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:24px;top:16px;position:fixed;z-index:99;background:var(--orange);color:var(--ink);padding:10px 16px;font-family:var(--mono);font-size:12px}
+
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; font-weight:700;
+    letter-spacing:0.2em; text-transform:uppercase; color:var(--orange); margin:0 0 18px
+  }
+  .eyebrow.sky{color:var(--sky)}
+
+  /* ---------- header ---------- */
+  header{border-bottom:1px solid var(--rule)}
+  .bar{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:20px 0}
+  .name-mark{font-family:var(--mono); font-size:12px; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--white)}
+  .bar nav{display:flex; gap:26px}
+  .bar nav a{font-family:var(--mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted)}
+  .bar nav a:hover{color:var(--orange); text-decoration:none}
+
+  /* ---------- hero ---------- */
+  .hero{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center; padding:84px 0 72px}
+  .hero h1{font-size:clamp(44px,7vw,78px); font-weight:900; max-width:12ch}
+  .hero h1 .dot{color:var(--orange)}
+  .lede{font-size:20px; color:var(--white); margin:22px 0 0; max-width:46ch}
+  .bio{color:var(--muted); margin:18px 0 0; max-width:52ch}
+  .cta-row{display:flex; flex-wrap:wrap; gap:12px; margin-top:32px}
+  .btn{
+    display:inline-block; font-family:var(--mono); font-size:12px; font-weight:700;
+    letter-spacing:0.16em; text-transform:uppercase; padding:14px 22px; border:1px solid var(--orange);
+    background:var(--orange); color:var(--ink)
+  }
+  .btn:hover{background:var(--orange-bright); border-color:var(--orange-bright); color:var(--ink); text-decoration:none}
+  .btn.ghost{background:transparent; color:var(--white); border-color:var(--rule)}
+  .btn.ghost:hover{background:transparent; border-color:var(--orange); color:var(--orange); text-decoration:none}
+
+  .portrait{position:relative}
+  .portrait img{
+    width:100%;
+    /* the source photo is on true black; fade its edges so it melts into the Ink ground */
+    -webkit-mask-image:radial-gradient(ellipse 72% 62% at 52% 46%, #000 58%, transparent 82%);
+    mask-image:radial-gradient(ellipse 72% 62% at 52% 46%, #000 58%, transparent 82%);
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:76px 0; border-top:1px solid var(--rule)}
+  .sec-head{max-width:60ch; margin-bottom:44px}
+  .sec-head h2{font-size:clamp(28px,4vw,40px); font-weight:800}
+  .sec-head p{color:var(--muted); margin:16px 0 0}
+
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+  .card{background:var(--ink3); border:1px solid var(--rule); padding:30px 26px; display:flex; flex-direction:column}
+  .card h3{font-size:23px; font-weight:800; margin-bottom:12px}
+  .card p{color:var(--muted); font-size:16px; margin:0 0 18px}
+  .card .role{font-family:var(--mono); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted2); margin:0 0 14px}
+  .card .go{margin-top:auto; font-family:var(--mono); font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase}
+  .card-logo{height:26px; width:auto; margin-bottom:16px}
+
+  .principles{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+  .principle{border-left:2px solid var(--orange); padding:4px 0 4px 20px}
+  .principle h3{font-size:18px; font-weight:800; margin-bottom:8px}
+  .principle p{color:var(--muted); font-size:15px; margin:0}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--rule); padding:56px 0 64px}
+  .foot-grid{display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; align-items:flex-start}
+  .foot-links{display:flex; flex-wrap:wrap; gap:22px}
+  .foot-links a{font-family:var(--mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase}
+  .stamp{font-family:var(--mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted2); margin-top:34px}
+  .contact-h{font-size:clamp(26px,4vw,36px); font-weight:800; margin-bottom:14px}
+  .contact-h .dot{color:var(--orange)}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr; gap:40px; padding:56px 0 48px}
+    .portrait{order:-1; max-width:400px}
+    .grid-3,.principles{grid-template-columns:1fr}
+    .bar nav{display:none}
+    section{padding:56px 0}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    a,.btn{transition:color .15s ease, background-color .15s ease, border-color .15s ease}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap bar">
+    <span class="name-mark">Steven&nbsp;Scatina</span>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#how">How I work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">// Berkeley, California</p>
+        <h1>Steven Scatina<span class="dot">.</span></h1>
+        <p class="lede">Founder of 510tech. I build marketing systems that let small businesses punch far above their budget.</p>
+        <p class="bio">Most of what I do comes down to the same thing: find the leverage, build the system, then get out of the way. Some days that is a Google Ads account, some days it is an automation nobody sees, and some days it is a camera or a clutch of dragon eggs.</p>
+        <div class="cta-row">
+          <a class="btn" href="mailto:steven@510tech.com">Get in touch</a>
+          <a class="btn ghost" href="https://510tech.com" rel="noopener">Visit 510tech</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="assets/steven-scatina.jpg" width="1000" height="1251"
+             alt="Portrait of Steven Scatina" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow sky">// What I&nbsp;do</p>
+        <h2>Three things, and they all run on&nbsp;systems.</h2>
+        <p>An agency, a small breeding operation, and a camera. Different worlds, same habit of building the process before doing the work twice.</p>
+      </div>
+      <div class="grid-3">
+
+        <article class="card">
+          <img class="card-logo" src="assets/510tech-wordmark.svg" alt="510tech" width="83" height="26">
+          <p class="role">Founder &middot; Strategy &amp; Operations</p>
+          <p>A digital marketing agency in the East Bay. Google, Yelp and Meta ads, web design, SEO and AI search optimization for local service businesses — the kind of work where response time and follow-through decide who wins.</p>
+          <a class="go" href="https://510tech.com" rel="noopener">510tech.com &rarr;</a>
+        </article>
+
+        <article class="card">
+          <h3>One Ring Reptiles</h3>
+          <p class="role">Breeder</p>
+          <p>A small, carefully run breeding operation for bearded dragons and Rankin's dragons. Genetics tracking, husbandry and record keeping handled with the same discipline as the day job, because animals do not tolerate guesswork.</p>
+          <a class="go" href="https://oneringreptiles.com" rel="noopener">oneringreptiles.com &rarr;</a>
+        </article>
+
+        <article class="card">
+          <h3>Photography</h3>
+          <p class="role">Portrait &amp; Event</p>
+          <p>Years of portrait and event work around Berkeley and the wider Bay Area. It is where I learned lighting, patience, and how to make someone comfortable in front of a lens — all of which turned out to be marketing skills too.</p>
+          <a class="go" href="https://www.instagram.com/stevenscatina/" rel="noopener">@stevenscatina &rarr;</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">// How I&nbsp;work</p>
+        <h2>Work on the business, not in&nbsp;it.</h2>
+      </div>
+      <div class="principles">
+        <div class="principle">
+          <h3>Systems over hustle</h3>
+          <p>Build the repeatable process. Never solve the same problem twice.</p>
+        </div>
+        <div class="principle">
+          <h3>Direct relationships</h3>
+          <p>You work with me, not a layer of account managers between us.</p>
+        </div>
+        <div class="principle">
+          <h3>Say it plainly</h3>
+          <p>No jargon, no false urgency. If something is not working, you hear it early.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h2 class="contact-h">Let's talk<span class="dot">.</span></h2>
+        <p style="color:var(--muted); margin:0; max-width:40ch">Best way to reach me is email. I read everything myself.</p>
+      </div>
+      <div class="foot-links">
+        <a href="mailto:steven@510tech.com">steven@510tech.com</a>
+        <a href="https://510tech.com" rel="noopener">510tech</a>
+        <a href="https://oneringreptiles.com" rel="noopener">One Ring Reptiles</a>
+        <a href="https://www.instagram.com/stevenscatina/" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <p class="stamp">Berkeley, California &middot; Built in The Bay</p>
+  </div>
+</footer>
+
+</body>
+</html>
