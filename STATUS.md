@@ -1,6 +1,6 @@
 # stevenscatina-com - STATUS
 
-> Read this first. Everything older in this repo is history, not truth. See HISTORY.md for the timeline.
+> Start here. Older notes are history; standing decisions and rules still apply until superseded. Timeline: HISTORY.md.
 
 ## What this is
 Steven's personal founder page, a static single-page site (`index.html` + `assets/`). No build
